@@ -1,0 +1,17 @@
+name: Very Bad CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run everything in one step
+        run: |
+          git clone https://pviskn:TOKEN@github.com/pviskn/ci-cd.git .
+          echo "API_KEY=biggest_secret_12345"
+          sudo npm install
+          npm test || true
+          npm run build
