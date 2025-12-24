@@ -1,0 +1,7 @@
+{
+  "name": "ci-cd",
+  "scripts": {
+    "test": "echo 'Running tests' && exit 0",
+    "build": "echo 'Building app' && exit 0"
+  }
+}
